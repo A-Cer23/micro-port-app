@@ -1,0 +1,8 @@
+services:
+  auth_server:
+    container_name: auth_server
+    build: .
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3000:3000
