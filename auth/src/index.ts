@@ -8,7 +8,7 @@ const port = 3000;
 app.use(express.json());
 
 app.get('/', async (req, res) => {
-    res.send({ message: `You've reached the auth service` });
+    res.send({ success: true, message: `You've reached the auth service` });
 });
 
 app.post('/register', async (req, res) => {
@@ -24,6 +24,10 @@ app.post('/register', async (req, res) => {
     } catch (error) {
         res.send(error);
     }
+})
+
+app.use((req, res, next) => {
+    res.status(404).send({ success: false, message: 'No route or method found'});
 })
 
 app.listen(port, () => {
