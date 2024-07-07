@@ -1,4 +1,4 @@
 export type InternalResponse = {
-    sucess: boolean;
+    success: boolean;
     message: string;
 }
