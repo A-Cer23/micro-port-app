@@ -15,7 +15,8 @@ app.post('/register', async (req, res) => {
     const { username, password } = req.body;
 
     if (!username || !password) {
-        res.send({ success: false, message: 'No username or password' });
+        res.send({ success: false, message: 'No username or passwordsssss' });
+        return;
     };
 
     try {
